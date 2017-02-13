@@ -8,5 +8,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="chai-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="chai-enzyme-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="mocha-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="node-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="react-redux-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="redux-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="redux-saga-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="sinon-DefinitelyTyped" level="application" />
   </component>
 </module>
