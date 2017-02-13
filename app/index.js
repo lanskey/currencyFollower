@@ -1,9 +1,6 @@
-/* 
- ./client/index.js
- */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestingComponent from './components/TestingComponent.js';
+import TestingComponent from './containers/TestingComponent.js';
 import { Provider } from 'react-redux'
 import store from './store'
 

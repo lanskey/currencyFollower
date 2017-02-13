@@ -1,4 +1,3 @@
-// TODO: Write a test for action
 import { addCurrency } from '../addCurrency'
 
 describe('addCurrency Action', () => {
