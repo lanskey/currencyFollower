@@ -3,35 +3,41 @@
  */
 import React from 'react';
 import { connect } from 'react-redux'
-
-function addTodo(text) {
-  return {
-    type: 'TEST',
-    text
-  }
-}
+import { addCurrency } from './../actions/addCurrency'
 
 class App extends React.Component {
+  onClickHandler = () => {
+    console.log('wtf')
+    console.log(this.props.welcome)
+    this.props.welcome ? this.props.addWelcome('') : this.props.addWelcome('Testing')
+  }
+
   render() {
-    console.log(this.props.todos)
-    this.props.addWelcome('Testing')
+    const { currency, welcome } = this.props
+
     return (
       <div style={{textAlign: 'center'}}>
-      <h1>Hello World</h1>
+      <h1>Hello World {welcome}</h1>
+        <ul>
+          {currency.map((item, index) => (
+            <li key={index} onClick={this.onClickHandler}>{item}</li>
+          ))}
+        </ul>
     </div>);
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    todos: state.list
+    currency: state.list,
+    welcome: state.welcome
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     addWelcome: (id) => {
-      dispatch(addTodo(id))
+      dispatch(addCurrency(id))
     }
   }
 }
