@@ -1,0 +1,14 @@
+{
+  "name": "currencyfollower",
+  "version": "0.0.1",
+  "description": "Concurrency follower allows you to spy range of currencies you've set up",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emanuel Slotwinski",
+  "license": "ISC"
+}
