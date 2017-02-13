@@ -5,7 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { addCurrency } from './../actions/addCurrency'
 
-class App extends React.Component {
+export class TestingComponent extends React.Component {
   onClickHandler = () => {
     console.log('wtf')
     console.log(this.props.welcome)
@@ -42,4 +42,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(TestingComponent)
