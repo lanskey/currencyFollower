@@ -7,7 +7,6 @@ import { addCurrency } from './../actions/addCurrency'
 
 export class TestingComponent extends React.Component {
   onClickHandler = () => {
-    console.log('wtf')
     console.log(this.props.welcome)
     this.props.welcome ? this.props.addWelcome('') : this.props.addWelcome('Testing')
   }

@@ -5,9 +5,7 @@ const initialState = {
 function currencyList(state = initialState, action) {
   switch (action.type) {
     case 'TEST':
-      return Object.assign({}, state, {
-        welcome: action.text
-      })
+      return { ...state,  welcome: action.text }
     default:
       return state
   }
