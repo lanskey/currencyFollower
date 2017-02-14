@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-import currencyList from './reducers/currencyList'
+import currencyList from 'reducers/manageCurrencies'
 
 const store = createStore(
   currencyList,

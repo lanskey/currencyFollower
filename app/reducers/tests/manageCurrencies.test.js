@@ -1,5 +1,5 @@
-import currencyListReducer from '../currencyList'
-import { addCurrency } from '../../actions/manageCurrencies'
+import manageCurrenciesReducer from '../manageCurrencies'
+import { addCurrency } from 'actions/manageCurrencies'
 
 const listFixture = [
   {
@@ -52,7 +52,7 @@ const listFixture = [
   }
 ]
 
-describe('currencyListReducer', () => {
+describe('manageCurrenciesReducer', () => {
   let state
   beforeEach(() => {
     state = {
@@ -61,14 +61,14 @@ describe('currencyListReducer', () => {
   })
 
   it('returns the initial state', () => {
-    expect(currencyListReducer(undefined, {})).to.eql(state);
+    expect(manageCurrenciesReducer(undefined, {})).to.eql(state);
   });
 
   it('should add/change value of state.welcome to expected', () => {
     const fixture = 'test';
     const expectedResult = { ...state, welcome: fixture }
 
-    expect(currencyListReducer(state, addCurrency(fixture))).to.eql(expectedResult);
+    expect(manageCurrenciesReducer(state, addCurrency(fixture))).to.eql(expectedResult);
   });
 })
 
