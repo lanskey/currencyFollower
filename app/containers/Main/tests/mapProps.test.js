@@ -10,7 +10,7 @@ describe('mapProps of <Main />', () => {
         expect(returned.addWelcome).to.not.eql(undefined);
       });
 
-      it('should dispatch onChangeTrend action', () => {
+      it('should dispatch addWelcome action', () => {
         const dispatch = sinon.spy();
         const returned = mapDispatch(dispatch);
 

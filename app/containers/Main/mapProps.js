@@ -1,4 +1,4 @@
-import { addCurrency } from 'actions/addCurrency';
+import { addCurrency } from 'actions/manageCurrencies';
 
 
 function mapDispatch(dispatch) {

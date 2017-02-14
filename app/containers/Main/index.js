@@ -1,9 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 import { connect } from 'react-redux'
-import { addCurrency } from 'actions/addCurrency'
 import CurrencyMenu from 'containers/CurrencyMenu'
-import { mapDispatch, mapState } from './mapProps';
+import { mapDispatch, mapState } from './mapProps'
 
 export class Main extends React.Component {
   render () {

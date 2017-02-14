@@ -1,5 +1,4 @@
 import React, { PropTypes as ptype, Component } from 'react'
-import { addCurrency } from 'actions/addCurrency'
 import CurrencyList from 'components/CurrencyList'
 
 

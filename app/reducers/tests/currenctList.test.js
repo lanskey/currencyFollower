@@ -1,5 +1,5 @@
 import currencyListReducer from '../currencyList'
-import { addCurrency } from '../../actions/addCurrency'
+import { addCurrency } from '../../actions/manageCurrencies'
 
 const listFixture = [
   {

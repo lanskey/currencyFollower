@@ -17,7 +17,6 @@ import './styles.scss'
 // Create container which will handle changing selected currencies
 // Create component which will represent more detailed information about specific currency
 // Create component which allow us to set the range of displayed data details
-//
 
 ReactDOM.render(
   <Provider store={store}>

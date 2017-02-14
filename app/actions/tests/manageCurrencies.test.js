@@ -1,4 +1,4 @@
-import { addCurrency } from '../addCurrency'
+import { addCurrency } from '../manageCurrencies'
 
 describe('addCurrency Action', () => {
   let fixture
