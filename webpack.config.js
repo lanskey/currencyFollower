@@ -58,7 +58,14 @@ const config = {
       }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig],
+  resolve: {
+    modules: [
+      './app',
+      'node_modules'
+    ],
+    extensions: ['.scss', '.js']
+  }
 };
 
 module.exports = config;
