@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import store from '../../../store'
 import { mount } from 'enzyme'
 
-describe('<Main />', () => {
+describe('<CurrencyDetails />', () => {
   let props
   let renderComponent;
   beforeEach(() => {
