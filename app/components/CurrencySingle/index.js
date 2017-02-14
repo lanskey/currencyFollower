@@ -3,11 +3,10 @@ import classNames from 'classnames'
 
 export class CurrencySingle extends React.Component {
   render () {
-    const { item: { currency } } = this.props
-
+    const { item: { currency }, isActive, onClick } = this.props
     return (
-      <li>
-        {currency}
+      <li onClick={onClick}>
+        {currency} { isActive !== -1 ? 'is active' : null}
       </li>
     );
   }

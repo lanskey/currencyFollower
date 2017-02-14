@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import { connect } from 'react-redux'
 import { addCurrency } from 'actions/addCurrency'
 import CurrencyList from 'components/CurrencyList'
+import CurrencyMenu from 'containers/CurrencyMenu'
 
 export class TestingComponent extends React.Component {
   render () {
@@ -12,10 +13,10 @@ export class TestingComponent extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <div className={classNames('col-md-6')}>
-            <h1>Hello World {welcome}</h1>
+            <CurrencyMenu  currencies={currency} />
           </div>
           <div className={classNames('col-md-6')}>
-            <CurrencyList items={currency} />
+            {/*<CurrencyList items={currency} />*/}
           </div>
         </div>
       </div>

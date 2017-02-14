@@ -17,6 +17,7 @@ import './styles.scss'
 // TODO: Make data dynamic
 // TODO: install code coverage
 // TODO: install eslint with a standartJS
+// TODO: Add propTypes
 
 // Create container which will handle changing selected currencies
 // Create component which will represent more detailed information about specific currency
