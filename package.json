@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback",
-    "test": "cross-env NODE_PATH=./app mocha --recursive --ui bdd --compilers js:babel-core/register app/**/*.test.js",
+    "test": "cross-env NODE_PATH=./app mocha --recursive app/**/*.test.js --ui bdd --compilers js:babel-core/register --require ignore-styles",
+    "test:coverage": "cross-env NODE_PATH=./app babel-node ./node_modules/istanbul/lib/cli.js  cover ./node_modules/mocha/bin/_mocha -- --recursive app/**/*.test.js --compilers js:babel-core/register --require ignore-styles",
     "test:watch": "npm run test -- --watch"
   },
   "author": "Emanuel Slotwinski",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
+    "babel-istanbul": "^0.12.1",
     "babel-plugin-transform-class-properties": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
     "bootstrap-loader": "^2.0.0-beta.20",
@@ -36,6 +38,8 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.10.0",
     "html-webpack-plugin": "^2.28.0",
+    "ignore-styles": "^5.0.1",
+    "istanbul": "^1.0.0-alpha.2",
     "jsdom": "9.11.0",
     "jsdom-global": "2.1.1",
     "mocha": "^3.2.0",
