@@ -11,4 +11,6 @@ export class CurrencyMenu extends React.Component {
   }
 }
 
+CurrencyMenu.propTypes = {}
+
 export default CurrencyMenu

@@ -6,7 +6,7 @@ describe('<SelectCurrency />', () => {
   let renderComponent;
   beforeEach(() => {
     props = {
-      currency: ['1', '2']
+      currencies: ['1', '2']
     }
     renderComponent = shallow(<SelectCurrency {...props} />);
   });

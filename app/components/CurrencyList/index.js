@@ -18,4 +18,6 @@ export class CurrencyList extends React.Component {
   }
 }
 
+CurrencyList.propTypes = {}
+
 export default CurrencyList

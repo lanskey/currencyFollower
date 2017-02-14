@@ -1,4 +1,4 @@
-import { TestingComponent } from '../index';
+import { Main } from '../index';
 import { Provider } from 'react-redux'
 import store from '../../../store'
 import { mount } from 'enzyme'
@@ -8,11 +8,11 @@ describe('<Main />', () => {
   let renderComponent;
   beforeEach(() => {
     props = {
-      currency: ['1', '2']
+      currency: [{}, {}]
     }
     renderComponent = mount(
       <Provider store={store}>
-        <TestingComponent {...props} />
+        <Main {...props} />
       </Provider>
     );
   });

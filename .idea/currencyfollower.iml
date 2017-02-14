@@ -16,5 +16,7 @@
     <orderEntry type="library" name="redux-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="redux-saga-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="sinon-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="react-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="react-props-decorators-DefinitelyTyped" level="application" />
   </component>
 </module>

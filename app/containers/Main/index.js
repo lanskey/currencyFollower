@@ -5,7 +5,7 @@ import { addCurrency } from 'actions/addCurrency'
 import CurrencyList from 'components/CurrencyList'
 import CurrencyMenu from 'containers/CurrencyMenu'
 
-export class TestingComponent extends React.Component {
+export class Main extends React.Component {
   render () {
     const { currency, welcome } = this.props
 
@@ -20,6 +20,8 @@ export class TestingComponent extends React.Component {
     );
   }
 }
+
+Main.propTypes = {}
 
 const mapStateToProps = (state) => {
   return {
@@ -36,4 +38,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TestingComponent)
+export default connect(mapStateToProps, mapDispatchToProps)(Main)

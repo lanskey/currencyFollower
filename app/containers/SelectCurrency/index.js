@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { PropTypes as ptype, Component } from 'react'
 import { addCurrency } from 'actions/addCurrency'
 import CurrencyList from 'components/CurrencyList'
 
 
-export class SelectCurrency extends React.Component {
+export class SelectCurrency extends Component {
   state = {
     activeCurrencies: []
   }
@@ -34,6 +34,10 @@ export class SelectCurrency extends React.Component {
       </div>
     );
   }
+}
+
+SelectCurrency.propTypes = {
+  currencies: ptype.array.isRequired
 }
 
 export default SelectCurrency

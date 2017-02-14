@@ -1,8 +1,8 @@
 import './styles.scss'
 
-import React from 'react'
+import React, { PropTypes as ptype, Component } from 'react'
 
-export class CurrencySingle extends React.Component {
+export class CurrencySingle extends Component {
   render () {
     const { item: { currency }, isActive, onClick } = this.props
     return (
@@ -11,6 +11,10 @@ export class CurrencySingle extends React.Component {
       </li>
     );
   }
+}
+
+CurrencySingle.propTypes = {
+  item: ptype.object.isRequired
 }
 
 export default CurrencySingle
