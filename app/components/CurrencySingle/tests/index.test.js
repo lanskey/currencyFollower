@@ -11,7 +11,7 @@ describe('<CurrencySingle />', () => {
     item: {
       currency: 'USD'
     },
-    isActive: true,
+    isFollowed: true,
     onClick: sinon.spy(),
   }
   beforeEach(() => {
@@ -23,10 +23,10 @@ describe('<CurrencySingle />', () => {
     expect(expected).to.eql(true)
   })
 
-  it('Should render Followed msg when isActive === true', () => {
+  it('Should render Followed msg when isFollowed === true', () => {
     expect(renderComponent.contains('Followed')).to.eql(true)
 
-    renderComponent.setProps({ isActive: -1 })
+    renderComponent.setProps({ isFollowed: false })
     expect(renderComponent.contains('Followed')).to.eql(false)
   })
 

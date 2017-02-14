@@ -11,7 +11,7 @@ export class CurrencyList extends React.Component {
     return (
       <ul className={classNames('currency-list', 'col-md-6')} >
         {items.map((currency, index) => (
-          <CurrencySingle key={index} item={currency} onClick={onClick(index)} isActive={activeElements.indexOf(index)} />
+          <CurrencySingle key={index} item={currency} onClick={onClick(index)} isFollowed={activeElements.indexOf(index) >= 0} />
         ))}
       </ul>
     );

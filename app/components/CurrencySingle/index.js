@@ -4,16 +4,17 @@ import React, { PropTypes as ptype, Component } from 'react'
 
 export class CurrencySingle extends Component {
   render () {
-    const { item: { currency }, isActive, onClick } = this.props
+    const { item: { currency }, isFollowed, onClick } = this.props
     return (
       <li className='currency-single' onClick={onClick}>
-        {currency} { isActive !== -1 ? 'Followed': null}
+        {currency} { isFollowed ? 'Followed': null}
       </li>
     );
   }
 }
 
 CurrencySingle.propTypes = {
+  isFollowed: ptype.bool,
   item: ptype.object.isRequired
 }
 
