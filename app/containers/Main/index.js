@@ -2,8 +2,8 @@ import React from 'react'
 import classNames from 'classnames'
 import { connect } from 'react-redux'
 import { addCurrency } from 'actions/addCurrency'
-import CurrencyList from 'components/CurrencyList'
 import CurrencyMenu from 'containers/CurrencyMenu'
+import { mapDispatch, mapState } from './mapProps';
 
 export class Main extends React.Component {
   render () {
@@ -23,19 +23,7 @@ export class Main extends React.Component {
 
 Main.propTypes = {}
 
-const mapStateToProps = (state) => {
-  return {
-    currency: state.list,
-    welcome: state.welcome
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addWelcome: (id) => {
-      dispatch(addCurrency(id))
-    }
-  }
-}
+const mapStateToProps = (state) => mapState(state);
+const mapDispatchToProps = (dispatch) => mapDispatch(dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main)
