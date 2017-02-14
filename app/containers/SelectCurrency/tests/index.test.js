@@ -11,7 +11,7 @@ describe('<SelectCurrency />', () => {
     renderComponent = shallow(<SelectCurrency {...props} />);
   });
   
-  it('should mark clicked elements as active', () => {
+  it('should add the index of clicked element into state.activeCurrencies', () => {
     expect(renderComponent.state().activeCurrencies).to.eql([])
 
     renderComponent.instance().onClickHandler(1)()
@@ -21,4 +21,8 @@ describe('<SelectCurrency />', () => {
     expect(renderComponent.state().activeCurrencies).to.eql([])
   })
   
+  it('should render CurrencyList component', () => {
+    const expected = renderComponent.find('CurrencyList')
+    expect(expected).to.have.length.of(1)
+  })
 })
