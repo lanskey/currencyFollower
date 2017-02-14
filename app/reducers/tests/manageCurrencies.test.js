@@ -1,5 +1,5 @@
-import manageCurrenciesReducer from '../manageCurrencies'
 import { addCurrency } from 'actions/manageCurrencies'
+import manageCurrenciesReducer from '../manageCurrencies'
 
 const listFixture = [
   {
@@ -56,7 +56,8 @@ describe('manageCurrenciesReducer', () => {
   let state
   beforeEach(() => {
     state = {
-      list: listFixture
+      list: listFixture,
+      active: [],
     }
   })
 

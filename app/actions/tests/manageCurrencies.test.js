@@ -1,4 +1,5 @@
 import { addCurrency } from '../manageCurrencies'
+import { addActiveCurrency } from 'constants/manageCurrencies'
 
 describe('addCurrency Action', () => {
   let fixture
@@ -8,7 +9,7 @@ describe('addCurrency Action', () => {
 
   it('should call test action', () => {
     const expected = {
-      type: 'TEST',
+      type: addActiveCurrency.request,
       text: fixture
     }
 

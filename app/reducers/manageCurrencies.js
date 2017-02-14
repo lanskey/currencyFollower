@@ -1,3 +1,5 @@
+import { addActiveCurrency } from 'constants/manageCurrencies'
+
 const initialState = {
   list: [
     {
@@ -48,16 +50,17 @@ const initialState = {
       "bid": 5.4420,
       "ask": 5.5520
     }
-  ]
+  ],
+  active: []
 }
 
-function currencyList (state = initialState, action) {
+function manageCurrencies (state = initialState, action) {
   switch (action.type) {
-    case 'TEST':
+    case addActiveCurrency.request:
       return { ...state, welcome: action.text }
     default:
       return state
   }
 }
 
-export default currencyList
+export default manageCurrencies

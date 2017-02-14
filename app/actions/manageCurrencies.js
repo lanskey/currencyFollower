@@ -1,6 +1,8 @@
+import { addActiveCurrency } from 'constants/manageCurrencies'
+
 export function addCurrency(text) {
   return {
-    type: 'TEST',
+    type: addActiveCurrency.request,
     text
   }
 }
