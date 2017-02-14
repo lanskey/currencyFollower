@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import classNames from 'classnames'
 import { connect } from 'react-redux'
 import { addCurrency } from './../actions/addCurrency'
 
@@ -12,14 +13,21 @@ export class TestingComponent extends React.Component {
     const { currency, welcome } = this.props
 
     return (
-      <div style={{textAlign: 'center'}}>
-      <h1>Hello World {welcome}</h1>
-        <ul>
-          {currency.map((item, index) => (
-            <li key={index} onClick={this.onClickHandler}>{item}</li>
-          ))}
-        </ul>
-    </div>);
+      <div className="container-fluid">
+        <div className="row">
+          <div className={classNames('col-md-6')}>
+            <h1>Hello World {welcome}</h1>
+          </div>
+          <div className={classNames('col-md-6')}>
+            <ul>
+              {currency.map((item, index) => (
+                <li key={index} onClick={this.onClickHandler}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 

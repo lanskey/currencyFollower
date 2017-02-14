@@ -4,9 +4,9 @@ import TestingComponent from './containers/TestingComponent.js';
 import { Provider } from 'react-redux'
 import store from './store'
 
+import 'bootstrap/dist/css/bootstrap.css'
 import './styles.scss'
 
-// TODO: Add styles (sass)
 // TODO: Create static data structures for currencies
 // TODO: Create component which display sell / buy prince
 // TODO: Create component which contain Currencies

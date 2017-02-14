@@ -34,6 +34,27 @@ const config = {
         }, {
           loader: "sass-loader"
         }]
+      },
+      {
+        test: /\.css$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }]
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      }, {
+        test: /\.txt$/,
+        loader: 'raw-loader'
+      }, {
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+        loader: 'url-loader?limit=10000'
+      }, {
+        test: /\.(eot|ttf|wav|mp3)$/,
+        loader: 'file-loader'
       }
     ]
   },
