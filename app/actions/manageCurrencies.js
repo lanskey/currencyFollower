@@ -1,8 +1,15 @@
-import { addActiveCurrency } from 'constants/manageCurrencies'
+import { addActiveCurrency, removeActiveCurrency } from 'constants/manageCurrencies'
 
-export function addCurrency(text) {
+export function addCurrency(which) {
   return {
     type: addActiveCurrency.request,
-    text
+    which
+  }
+}
+
+export function removeCurrency(which) {
+  return {
+    type: removeActiveCurrency.request,
+    which
   }
 }

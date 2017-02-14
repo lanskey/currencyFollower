@@ -66,8 +66,8 @@ describe('manageCurrenciesReducer', () => {
   });
 
   it('should add/change value of state.welcome to expected', () => {
-    const fixture = 'test';
-    const expectedResult = { ...state, welcome: fixture }
+    const fixture = {};
+    const expectedResult = { ...state, active: [fixture] }
 
     expect(manageCurrenciesReducer(state, addCurrency(fixture))).to.eql(expectedResult);
   });

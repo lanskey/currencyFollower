@@ -1,19 +1,28 @@
-import { addCurrency } from '../manageCurrencies'
-import { addActiveCurrency } from 'constants/manageCurrencies'
+import { addCurrency, removeCurrency } from '../manageCurrencies'
+import { addActiveCurrency, removeActiveCurrency } from 'constants/manageCurrencies'
 
 describe('addCurrency Action', () => {
   let fixture
   beforeEach(() => {
-    fixture = 'eslotwinski'
+    fixture = {}
   })
 
-  it('should call test action', () => {
+  it('should add requested currency', () => {
     const expected = {
       type: addActiveCurrency.request,
-      text: fixture
+      which: fixture
     }
 
     expect(addCurrency(fixture)).to.eql(expected)
+  })
+
+  it('should remove requested currency', () => {
+    const expected = {
+      type: removeActiveCurrency.request,
+      which: fixture
+    }
+
+    expect(removeCurrency(fixture)).to.eql(expected)
   })
   
 })

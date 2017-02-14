@@ -57,7 +57,7 @@ const initialState = {
 function manageCurrencies (state = initialState, action) {
   switch (action.type) {
     case addActiveCurrency.request:
-      return { ...state, welcome: action.text }
+      return { ...state, active: [...state.active, action.which] }
     default:
       return state
   }
