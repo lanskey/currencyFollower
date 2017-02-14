@@ -1,20 +1,21 @@
 import { Main } from '../index';
 import { Provider } from 'react-redux'
 import store from '../../../store'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 describe('<Main />', () => {
   let props
   let renderComponent;
   beforeEach(() => {
     props = {
-      currency: [{}, {}]
+      list: [{}, {}],
+      active: {}
     }
-    renderComponent = mount(
+    renderComponent = shallow(
       <Provider store={store}>
         <Main {...props} />
       </Provider>
-    );
+    ).shallow();
   });
 
   it('should render CurrencyMenu', () => {

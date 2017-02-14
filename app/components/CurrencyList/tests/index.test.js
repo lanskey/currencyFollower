@@ -15,7 +15,7 @@ describe('<CurrencyList />', () => {
         currency: 'ZL'
       },
     ],
-    activeElements: [],
+    followedElements: [],
     onClick: sinon.spy(),
   }
   beforeEach(() => {

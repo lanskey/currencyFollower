@@ -3,8 +3,8 @@ import { addCurrency } from 'actions/manageCurrencies';
 
 function mapDispatch(dispatch) {
   return {
-    addWelcome: (id) => {
-      dispatch(addCurrency(id))
+    markActive: (which) => {
+      dispatch(addCurrency(which))
     },
     dispatch
   }
@@ -12,8 +12,8 @@ function mapDispatch(dispatch) {
 
 function mapState(state) {
   return {
-    currency: state.list,
-    welcome: state.welcome
+    currencyList: state.list,
+    active: state.active
   }
 }
 

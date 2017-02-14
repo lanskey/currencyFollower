@@ -5,7 +5,7 @@ import SelectCurrency from 'containers/SelectCurrency'
 export class CurrencyMenu extends React.Component {
   render () {
     return (
-      <SelectCurrency currencies={this.props.currencies} />
+      <SelectCurrency />
     );
   }
 }

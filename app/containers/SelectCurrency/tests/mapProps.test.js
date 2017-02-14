@@ -7,14 +7,14 @@ describe('mapProps of <Main />', () => {
       it('should be injected', () => {
         const dispatch = sinon.spy();
         const returned = mapDispatch(dispatch);
-        expect(returned.addWelcome).to.not.eql(undefined);
+        expect(returned.markActive).to.not.eql(undefined);
       });
 
       it('should dispatch addWelcome action', () => {
         const dispatch = sinon.spy();
         const returned = mapDispatch(dispatch);
 
-        returned.addWelcome(1);
+        returned.markActive(1);
         expect(dispatch.calledOnce).to.eql(true);
       });
     });

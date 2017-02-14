@@ -57,7 +57,7 @@ describe('manageCurrenciesReducer', () => {
   beforeEach(() => {
     state = {
       list: listFixture,
-      active: [],
+      active: {},
     }
   })
 
@@ -67,7 +67,7 @@ describe('manageCurrenciesReducer', () => {
 
   it('should add/change value of state.welcome to expected', () => {
     const fixture = {};
-    const expectedResult = { ...state, active: [fixture] }
+    const expectedResult = { ...state, active: fixture }
 
     expect(manageCurrenciesReducer(state, addCurrency(fixture))).to.eql(expectedResult);
   });

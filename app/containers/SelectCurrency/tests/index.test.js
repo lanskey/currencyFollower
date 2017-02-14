@@ -12,13 +12,13 @@ describe('<SelectCurrency />', () => {
   });
   
   it('should add the index of clicked element into state.activeCurrencies', () => {
-    expect(renderComponent.state().activeCurrencies).to.eql([])
+    expect(renderComponent.state().followedCurrencies).to.eql([])
 
     renderComponent.instance().onClickHandler(1)()
-    expect(renderComponent.state().activeCurrencies).to.eql([1])
+    expect(renderComponent.state().followedCurrencies).to.eql([1])
 
     renderComponent.instance().onClickHandler(1)()
-    expect(renderComponent.state().activeCurrencies).to.eql([])
+    expect(renderComponent.state().followedCurrencies).to.eql([])
   })
   
   it('should render CurrencyList component', () => {
