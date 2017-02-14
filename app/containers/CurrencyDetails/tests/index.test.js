@@ -1,19 +1,15 @@
 import { CurrencyDetails } from '../index';
-import { Provider } from 'react-redux'
-import store from '../../../store'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 describe('<CurrencyDetails />', () => {
   let props
   let renderComponent;
   beforeEach(() => {
     props = {
-      currency: [{}, {}]
+      currency: [ {}, {} ]
     }
-    renderComponent = mount(
-      <Provider store={store}>
-        <CurrencyDetails {...props} />
-      </Provider>
+    renderComponent = shallow(
+      <CurrencyDetails {...props} />
     );
   });
 

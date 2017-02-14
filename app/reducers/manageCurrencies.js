@@ -51,7 +51,7 @@ const initialState = {
       "ask": 5.5520
     }
   ],
-  active: {}
+  active: null
 }
 
 function manageCurrencies (state = initialState, action) {

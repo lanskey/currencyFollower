@@ -15,7 +15,7 @@ export class CurrencyDetails extends React.Component {
     }
 
     return (
-      <div className="container-fluid">
+      <div>
           <h1>name: {active.currency}</h1>
           <h1>bid: {active.bid}</h1>
           <h1>ask: {active.ask}</h1>

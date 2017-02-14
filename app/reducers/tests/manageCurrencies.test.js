@@ -57,7 +57,7 @@ describe('manageCurrenciesReducer', () => {
   beforeEach(() => {
     state = {
       list: listFixture,
-      active: {},
+      active: null,
     }
   })
 

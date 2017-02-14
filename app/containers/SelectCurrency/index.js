@@ -4,41 +4,43 @@ import { mapDispatch, mapState } from './mapProps'
 import { connect } from 'react-redux'
 
 export class SelectCurrency extends Component {
-  state = {
-    followedCurrencies: []
-  }
-
-  onClickHandler = (index) => {
+  markAsFollowed = (item, index) => {
     return () => {
-      const { followedCurrencies } = this.state
+      const { removeFollowed, addFollowed, followed, currencyList } = this.props
+      const followedIndex = followed.indexOf(item)
+
 
       // If element is already in array remove it (deactivate)
       // else mark it as active
-      if (followedCurrencies.indexOf(index) >= 0) {
-        const stateIndex = followedCurrencies.indexOf(index)
-        const newSelectedCurrencies = followedCurrencies.filter((item, index) => index !== stateIndex)
+      console.log(followedIndex)
+      if (followedIndex >= 0) {
+        // remove followed
 
-        this.setState({ followedCurrencies: newSelectedCurrencies })
+        removeFollowed(followedIndex)
       }
       else {
-        this.setState({ followedCurrencies: [...followedCurrencies, index] })
+
+        const which = currencyList.filter(currency => currency === item)
+        addFollowed(...which)
       }
     }
   }
 
   markAsSelected = (which) => {
     return () => {
-      const { markActive } = this.props
+      const { markActive, active } = this.props
 
-      markActive(which)
+      if (active !== which) {
+        markActive(which)
+      }
     }
   }
 
   render () {
-    const { currencyList, active } = this.props
+    const { currencyList, active, followed } = this.props
     return (
       <div className="container-fluid">
-        <CurrencyList items={currencyList} activeElement={active} followedElements={this.state.followedCurrencies} onClick={this.markAsSelected} />
+        <CurrencyList items={currencyList} activeElement={active} followedElements={followed} onClick={this.markAsSelected} onDoubleClick={this.markAsFollowed}/>
       </div>
     );
   }

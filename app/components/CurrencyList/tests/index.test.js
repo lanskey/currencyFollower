@@ -17,6 +17,7 @@ describe('<CurrencyList />', () => {
     ],
     followedElements: [],
     onClick: sinon.spy(),
+    onDoubleClick: sinon.spy(),
   }
   beforeEach(() => {
     renderComponent = shallow(<CurrencyList {...props} />, {});

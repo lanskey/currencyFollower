@@ -1,8 +1,9 @@
 import { addCurrency } from 'actions/manageCurrencies';
 
 function mapState(state) {
+  console.log(state)
   return {
-    active: state.list[state.active]
+    active: state.currencies.active
   }
 }
 

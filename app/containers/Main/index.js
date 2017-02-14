@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import CurrencyMenu from 'containers/CurrencyMenu'
 import CurrencyDetails from 'containers/CurrencyDetails'
+import CurrencyFollowed from 'containers/CurrencyFollowed'
 
 
 export class Main extends React.Component {
@@ -16,6 +17,9 @@ export class Main extends React.Component {
         <div className={classNames('col-md-6')}>
           <div className="row">
             <CurrencyDetails />
+          </div>
+          <div className="row">
+            <CurrencyFollowed />
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { addCurrency } from 'actions/manageCurrencies';
+import { addCurrency, addFollowed, removeFollowed } from 'actions/manageCurrencies';
 
 
 function mapDispatch(dispatch) {
@@ -6,14 +6,21 @@ function mapDispatch(dispatch) {
     markActive: (which) => {
       dispatch(addCurrency(which))
     },
+    addFollowed: (which) => {
+      dispatch(addFollowed(which))
+    },
+    removeFollowed: (index) => {
+      dispatch(removeFollowed(index))
+    },
     dispatch
   }
 }
 
 function mapState(state) {
   return {
-    currencyList: state.list,
-    active: state.active
+    currencyList: state.currencies.list,
+    active: state.currencies.active,
+    followed: state.followed.list
   }
 }
 

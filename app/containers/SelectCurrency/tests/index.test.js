@@ -7,19 +7,24 @@ describe('<SelectCurrency />', () => {
   let renderComponent;
   beforeEach(() => {
     props = {
-      currencies: ['1', '2']
+      active: {},
+      currencyList: ['1', '2'],
+      markActive: sinon.spy(),
+      followed:[]
     }
     renderComponent = shallow(<SelectCurrency {...props} />);
   });
   
   it('should add the index of clicked element into state.activeCurrencies', () => {
-    expect(renderComponent.state().followedCurrencies).to.eql([])
+    const spyMock = props.markActive
+    const fixture = {test: 'test'}
 
-    renderComponent.instance().onClickHandler(1)()
-    expect(renderComponent.state().followedCurrencies).to.eql([1])
+    renderComponent.instance().markAsSelected(fixture)()
+    expect(spyMock.calledOnce).to.eql(true)
+    renderComponent.setProps({ active: fixture })
 
-    renderComponent.instance().onClickHandler(1)()
-    expect(renderComponent.state().followedCurrencies).to.eql([])
+    renderComponent.instance().markAsSelected(fixture)()
+    expect(spyMock.calledTwice).to.eql(false)
   })
 
   it('should render CurrencyList component', () => {

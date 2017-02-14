@@ -1,15 +1,22 @@
-import { addActiveCurrency, removeActiveCurrency } from 'constants/manageCurrencies'
+import * as constants from 'constants/manageCurrencies'
 
 export function addCurrency(which) {
   return {
-    type: addActiveCurrency.request,
+    type: constants.addActiveCurrency.request,
     which
   }
 }
 
-export function removeCurrency(which) {
+export function addFollowed(which) {
   return {
-    type: removeActiveCurrency.request,
+    type: constants.addFollowed.request,
     which
+  }
+}
+
+export function removeFollowed(index) {
+  return {
+    type: constants.removeFollowed.request,
+    index
   }
 }

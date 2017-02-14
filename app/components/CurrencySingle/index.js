@@ -5,9 +5,9 @@ import classNames from 'classnames'
 
 export class CurrencySingle extends Component {
   render () {
-    const { item: { currency }, isFollowed, isActive, onClick } = this.props
+    const { item: { currency }, isFollowed, isActive, onClick, onDoubleClick } = this.props
     return (
-      <li className={classNames('currency-single', isActive ? 'currency-single--is-active' : null)} onClick={onClick}>
+      <li className={classNames('currency-single', isActive ? 'currency-single--is-active' : null)} onClick={onClick} onDoubleClick={onDoubleClick}>
         {currency} { isFollowed ? 'Followed': null}
       </li>
     );

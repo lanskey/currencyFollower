@@ -1,5 +1,5 @@
-import { addCurrency, removeCurrency } from '../manageCurrencies'
-import { addActiveCurrency, removeActiveCurrency } from 'constants/manageCurrencies'
+import { addCurrency, addFollowed } from '../manageCurrencies'
+import * as constants from 'constants/manageCurrencies'
 
 describe('addCurrency Action', () => {
   let fixture
@@ -9,7 +9,7 @@ describe('addCurrency Action', () => {
 
   it('should add requested currency', () => {
     const expected = {
-      type: addActiveCurrency.request,
+      type: constants.addActiveCurrency.request,
       which: fixture
     }
 
@@ -18,11 +18,11 @@ describe('addCurrency Action', () => {
 
   it('should remove requested currency', () => {
     const expected = {
-      type: removeActiveCurrency.request,
+      type: constants.addFollowed.request,
       which: fixture
     }
 
-    expect(removeCurrency(fixture)).to.eql(expected)
+    expect(addFollowed(fixture)).to.eql(expected)
   })
   
 })
