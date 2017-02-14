@@ -39,4 +39,29 @@ describe('<SelectCurrency />', () => {
     renderComponent.instance().markAsSelected()()
     expect(mockMarkActive.calledOnce).to.eql(true)
   })
+  
+  it('should add currency to followed list', () => {
+    const mockAddFollowed = sinon.mock()
+
+    renderComponent.setProps({ addFollowed: mockAddFollowed })
+
+    renderComponent.instance().markAsFollowed()()
+    expect(mockAddFollowed.calledOnce).to.eql(true)
+  })
+
+  it('should remove currency from followed list', () => {
+    const mockRemoveFollowed = sinon.mock()
+    const fixture = 'eslotwinski'
+    renderComponent.setProps({ followed: [fixture], removeFollowed: mockRemoveFollowed })
+
+    renderComponent.instance().markAsFollowed(fixture)()
+    expect(mockRemoveFollowed.calledOnce).to.eql(true)
+  })
+  
+
+  it('should render CurrencyList', () => {
+    const expected = renderComponent.find('CurrencyList')
+    expect(expected).to.have.length.of(1)
+  })
+  
 })
