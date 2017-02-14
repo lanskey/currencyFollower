@@ -1,7 +1,6 @@
 import './styles.scss'
 
 import React from 'react'
-import classNames from 'classnames'
 
 export class CurrencySingle extends React.Component {
   render () {

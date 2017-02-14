@@ -1,19 +1,24 @@
 import { SelectCurrency } from '../index';
-import { Provider } from 'react-redux'
-import store from '../../../store'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-describe('addCurrency', () => {
+describe('<SelectCurrency />', () => {
   let props
   let renderComponent;
   beforeEach(() => {
     props = {
       currency: ['1', '2']
     }
-    renderComponent = mount(
-      <Provider store={store}>
-        <SelectCurrency {...props} />
-      </Provider>
-    );
+    renderComponent = shallow(<SelectCurrency {...props} />);
   });
+  
+  it('should mark clicked elements as active', () => {
+    expect(renderComponent.state().activeCurrencies).to.eql([])
+
+    renderComponent.instance().onClickHandler(1)()
+    expect(renderComponent.state().activeCurrencies).to.eql([1])
+
+    renderComponent.instance().onClickHandler(1)()
+    expect(renderComponent.state().activeCurrencies).to.eql([])
+  })
+  
 })

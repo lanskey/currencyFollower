@@ -27,10 +27,10 @@ export class SelectCurrency extends React.Component {
   }
 
   render () {
-    console.log(this.state.activeCurrencies)
+    const { currencies } = this.props
     return (
       <div className="container-fluid">
-        <CurrencyList items={this.props.currencies} activeElements={this.state.activeCurrencies} onClick={this.onClickHandler} />
+        <CurrencyList items={currencies} activeElements={this.state.activeCurrencies} onClick={this.onClickHandler} />
       </div>
     );
   }

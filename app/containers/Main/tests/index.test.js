@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import store from '../../../store'
 import { mount } from 'enzyme'
 
-describe('addCurrency', () => {
+describe('<Main />', () => {
   let props
   let renderComponent;
   beforeEach(() => {
@@ -17,9 +17,8 @@ describe('addCurrency', () => {
     );
   });
 
-  it('should render h1', () => {
-    const expected = renderComponent
-    expect(expected.find('h1')).to.have.length.of(1)
+  it('should render CurrencyMenu', () => {
+    const expected = renderComponent.find('CurrencyMenu')
+    expect(expected).to.have.length.of(1)
   })
-
 })
