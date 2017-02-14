@@ -1,0 +1,11 @@
+.currency-single {
+  color: #333;
+  padding: 15px;
+  font-size: 24px;
+  margin: 15px 0;
+  background-color: #ddd;
+  &:hover {
+    cursor: pointer;
+    background-color: #ccc;
+  }
+}

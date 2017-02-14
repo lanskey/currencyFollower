@@ -11,14 +11,11 @@ export class TestingComponent extends React.Component {
 
     return (
       <div className="container-fluid">
-        <div className="row">
           <div className={classNames('col-md-6')}>
-            <CurrencyMenu  currencies={currency} />
+            <div className="row">
+              <CurrencyMenu  currencies={currency} />
+            </div>
           </div>
-          <div className={classNames('col-md-6')}>
-            {/*<CurrencyList items={currency} />*/}
-          </div>
-        </div>
       </div>
     );
   }

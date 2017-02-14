@@ -1,3 +1,5 @@
+import './styles.scss'
+
 import React from 'react'
 import classNames from 'classnames'
 import CurrencySingle from 'components/CurrencySingle'
@@ -7,9 +9,9 @@ export class CurrencyList extends React.Component {
     const { items, onClick, activeElements } = this.props
 
     return (
-      <ul className={classNames('col-md-6')} >
+      <ul className={classNames('currency-list', 'col-md-6')} >
         {items.map((currency, index) => (
-        <CurrencySingle key={index} item={currency} onClick={onClick(index)} isActive={activeElements.indexOf(index)} />
+          <CurrencySingle key={index} item={currency} onClick={onClick(index)} isActive={activeElements.indexOf(index)} />
         ))}
       </ul>
     );
