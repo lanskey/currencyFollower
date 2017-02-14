@@ -1,6 +1,6 @@
-import { TestingComponent } from '../TestingComponent';
+import { TestingComponent } from '../index';
 import { Provider } from 'react-redux'
-import store from '../../store'
+import store from '../../../store'
 import { mount } from 'enzyme'
 
 describe('addCurrency', () => {
