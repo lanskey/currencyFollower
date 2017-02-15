@@ -21,9 +21,10 @@ export function removeFollowed(index) {
   }
 }
 
-export function getCurrencies(list) {
+export function getCurrencies(list, date) {
   return {
     type: constants.getCurrencies.request,
-    list
+    list,
+    date
   }
 }

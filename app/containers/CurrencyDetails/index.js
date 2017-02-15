@@ -4,7 +4,7 @@ import { mapState } from './mapProps'
 
 export class CurrencyDetails extends React.Component {
   render () {
-    const { active } = this.props
+    const { date, active } = this.props
 
     if (!active) {
       return (
@@ -20,6 +20,7 @@ export class CurrencyDetails extends React.Component {
           <h1>bid: {active.bid}</h1>
           <h1>ask: {active.ask}</h1>
           <h1>code: {active.code}</h1>
+          <h1>date: {date}</h1>
       </div>
     );
   }

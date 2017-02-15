@@ -12,8 +12,8 @@ function mapDispatch(dispatch) {
     removeFollowed: (index) => {
       dispatch(removeFollowed(index))
     },
-    getCurrencies: (index) => {
-      dispatch(getCurrencies(index))
+    getCurrencies: (list, date) => {
+      dispatch(getCurrencies(list, date))
     },
     dispatch
   }

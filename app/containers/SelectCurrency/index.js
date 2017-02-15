@@ -7,7 +7,9 @@ import { getCurrenciesList } from 'services'
 
 export class SelectCurrency extends Component {
   componentDidMount() {
-    getCurrenciesList().then(this.props.getCurrencies)
+    getCurrenciesList().then((data) => {
+      this.props.getCurrencies(data.rates, data.effectiveDate)
+    })
   }
 
   markAsFollowed = (item) => {

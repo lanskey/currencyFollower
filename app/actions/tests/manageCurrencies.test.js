@@ -28,10 +28,11 @@ describe('addCurrency Action', () => {
   it('should get currencies', () => {
     const expected = {
       type: constants.getCurrencies.request,
-      list: fixture
+      list: fixture,
+      date: fixture
     }
 
-    expect(getCurrencies(fixture)).to.eql(expected)
+    expect(getCurrencies(fixture, fixture)).to.eql(expected)
   })
   
 })

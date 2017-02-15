@@ -58,6 +58,7 @@ describe('manageCurrenciesReducer', () => {
     state = {
       list: [],
       active: null,
+      date: null
     }
   })
 

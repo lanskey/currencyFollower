@@ -23,5 +23,5 @@ export function request(url, options) {
 export function getCurrenciesList(){
   const url = 'http://api.nbp.pl/api/exchangerates/tables/C/last?format=json'
 
-  return request(url).then(({ data }) => data[0].rates)
+  return request(url).then(({ data }) => data[0])
 }
