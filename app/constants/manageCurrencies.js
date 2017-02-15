@@ -16,8 +16,15 @@ export const removeFollowed = {
   error: 'ERROR_REMOVE_FOLLOWED'
 }
 
+export const getCurrencies = {
+  request: 'REQUEST_CURRENCIES',
+  success: 'SUCCESS_CURRENCIES',
+  error: 'ERROR_CURRENCIES'
+}
+
 export default {
   addActiveCurrency,
   addFollowed,
-  removeFollowed
+  removeFollowed,
+  getCurrencies
 }

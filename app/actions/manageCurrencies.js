@@ -20,3 +20,10 @@ export function removeFollowed(index) {
     index
   }
 }
+
+export function getCurrencies(list) {
+  return {
+    type: constants.getCurrencies.request,
+    list
+  }
+}

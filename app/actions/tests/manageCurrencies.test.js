@@ -1,4 +1,4 @@
-import { addCurrency, addFollowed } from '../manageCurrencies'
+import { addCurrency, addFollowed, getCurrencies } from '../manageCurrencies'
 import * as constants from 'constants/manageCurrencies'
 
 describe('addCurrency Action', () => {
@@ -23,6 +23,15 @@ describe('addCurrency Action', () => {
     }
 
     expect(addFollowed(fixture)).to.eql(expected)
+  })
+
+  it('should get currencies', () => {
+    const expected = {
+      type: constants.getCurrencies.request,
+      list: fixture
+    }
+
+    expect(getCurrencies(fixture)).to.eql(expected)
   })
   
 })

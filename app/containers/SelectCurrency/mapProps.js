@@ -1,4 +1,4 @@
-import { addCurrency, addFollowed, removeFollowed } from 'actions/manageCurrencies';
+import { addCurrency, addFollowed, removeFollowed, getCurrencies } from 'actions/manageCurrencies';
 
 
 function mapDispatch(dispatch) {
@@ -11,6 +11,9 @@ function mapDispatch(dispatch) {
     },
     removeFollowed: (index) => {
       dispatch(removeFollowed(index))
+    },
+    getCurrencies: (index) => {
+      dispatch(getCurrencies(index))
     },
     dispatch
   }

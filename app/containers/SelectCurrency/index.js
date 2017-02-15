@@ -3,8 +3,13 @@ import CurrencyList from 'components/CurrencyList'
 import { mapDispatch, mapState } from './mapProps'
 import { connect } from 'react-redux'
 import { find } from 'lodash'
+import { getCurrenciesList } from 'services'
 
 export class SelectCurrency extends Component {
+  componentDidMount() {
+    getCurrenciesList().then(this.props.getCurrencies)
+  }
+
   markAsFollowed = (item) => {
     return () => {
       const { removeFollowed, addFollowed, followed, currencyList } = this.props
@@ -35,6 +40,15 @@ export class SelectCurrency extends Component {
 
   render () {
     const { currencyList, active, followed } = this.props
+
+    if (currencyList.length <= 0) {
+      return (
+        <div>
+          Loading
+        </div>
+      )
+    }
+
     return (
       <div>
         <CurrencyList items={currencyList} activeElement={active} followedElements={followed} onClick={this.markAsSelected} onDoubleClick={this.markAsFollowed}/>
