@@ -11,6 +11,7 @@ function mapDispatch(dispatch) {
 
 function mapState(state) {
   return {
+    date: state.currencies.date,
     followed: state.followed.list
   }
 }
