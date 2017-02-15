@@ -1,5 +1,5 @@
 import { SelectCurrency } from '../index';
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
 
 describe('<SelectCurrency />', () => {
@@ -8,8 +8,9 @@ describe('<SelectCurrency />', () => {
   beforeEach(() => {
     props = {
       active: {},
-      currencyList: ['1', '2'],
+      currencyList: [{}, {}],
       markActive: sinon.spy(),
+      getCurrencies: sinon.mock(),
       followed:[]
     }
     renderComponent = shallow(<SelectCurrency {...props} />);
@@ -57,11 +58,24 @@ describe('<SelectCurrency />', () => {
     renderComponent.instance().markAsFollowed(fixture)()
     expect(mockRemoveFollowed.calledOnce).to.eql(true)
   })
-  
 
   it('should render CurrencyList', () => {
     const expected = renderComponent.find('CurrencyList')
     expect(expected).to.have.length.of(1)
+  })
+
+  it('should get CurrencyList when componentDidMount', (done) => {
+    const didMount = sinon.spy(SelectCurrency.prototype, 'componentDidMount')
+
+    renderComponent = mount(<SelectCurrency {...props} />)
+    expect(didMount.callCount).to.eql(1)
+
+    // Most implest way to test async call
+    setTimeout(() => {
+      expect(props.getCurrencies.callCount).to.eql(1)
+      done()
+    }, 200)
+    didMount.restore()
   })
   
 })

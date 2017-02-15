@@ -1,3 +1,5 @@
+import fetch from 'isomorphic-fetch'
+
 function parseJSON(response) {
   return response.json();
 }
