@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import CurrencyMenu from 'containers/CurrencyMenu'
+import SelectCurrency from 'containers/SelectCurrency'
 import CurrencyDetails from 'containers/CurrencyDetails'
 import CurrencyFollowed from 'containers/CurrencyFollowed'
 
@@ -9,12 +9,12 @@ export class Main extends React.Component {
   render () {
     return (
       <div className="container-fluid">
-        <div className={classNames('col-md-6')}>
+        <div className={classNames('col-md-2')}>
           <div className="row">
-            <CurrencyMenu />
+            <SelectCurrency />
           </div>
         </div>
-        <div className={classNames('col-md-6')}>
+        <div className={classNames('col-md-9')}>
           <div className="row">
             <CurrencyDetails />
           </div>

@@ -7,16 +7,8 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.scss'
 
-// - add reducer for handing currencies
-// TODO: Create container which will display details about current selected currency
 // TODO: Make data dynamic
-// TODO: install eslint with a standartJS
-// TODO: Add propTypes
 // TODO: Implmenet localstorage
-
-// Create container which will handle changing selected currencies
-// Create component which will represent more detailed information about specific currency
-// Create component which allow us to set the range of displayed data details
 
 ReactDOM.render(
   <Provider store={store}>

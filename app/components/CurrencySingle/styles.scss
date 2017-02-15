@@ -10,5 +10,12 @@
   }
   &.currency-single--is-active {
     background-color: yellow;
+    &.currency-single--is-followed {
+      background-color: red;
+    }
+  }
+
+  &.currency-single--is-followed {
+    background-color: orange;
   }
 }

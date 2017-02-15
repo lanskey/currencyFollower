@@ -1,0 +1,16 @@
+.currency-followed {
+  position: fixed;
+  bottom: 0;
+
+  .single {
+    float: left;
+    margin: 0 10px;
+    min-width: 200px;
+  }
+
+  .list {
+    overflow-x: auto;
+    display: flex;
+    flex-flow: row;
+  }
+}

@@ -9,6 +9,7 @@ function manageFollowedReducer (state = initialState, action) {
     case addFollowed.request:
       return { ...state, list: [ ...state.list, action.which ] }
     case removeFollowed.request:
+
       return {
         ...state, list: [
           ...state.list.slice(0, action.index),

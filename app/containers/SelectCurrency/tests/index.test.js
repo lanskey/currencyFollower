@@ -51,7 +51,7 @@ describe('<SelectCurrency />', () => {
 
   it('should remove currency from followed list', () => {
     const mockRemoveFollowed = sinon.mock()
-    const fixture = 'eslotwinski'
+    const fixture = {}
     renderComponent.setProps({ followed: [fixture], removeFollowed: mockRemoveFollowed })
 
     renderComponent.instance().markAsFollowed(fixture)()
