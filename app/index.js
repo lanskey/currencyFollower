@@ -7,9 +7,6 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.scss'
 
-// TODO: Make data dynamic
-// TODO: Implmenet localstorage
-
 ReactDOM.render(
   <Provider store={store}>
     <Main />

@@ -6,6 +6,10 @@ import CurrencyFollowed from 'containers/CurrencyFollowed'
 
 
 export class Main extends React.Component {
+  componentWillMount() {
+    debugger
+  }
+
   render () {
     return (
       <div className="container-fluid">

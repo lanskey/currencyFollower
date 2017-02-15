@@ -5,11 +5,10 @@ import { connect } from 'react-redux'
 import { find } from 'lodash'
 
 export class SelectCurrency extends Component {
-  markAsFollowed = (item, index) => {
+  markAsFollowed = (item) => {
     return () => {
       const { removeFollowed, addFollowed, followed, currencyList } = this.props
       const followedItem = find(followed, item)
-
 
       // If element is already in array remove it (deactivate)
       // else mark it as active
@@ -17,7 +16,7 @@ export class SelectCurrency extends Component {
         const index = followed.indexOf(followedItem)
         removeFollowed(index)
       }
-      else if(!find(followed, item)) {
+      else if(!followedItem) {
         const which = currencyList.filter(currency => currency === item)
         addFollowed(...which)
       }
