@@ -1,6 +1,6 @@
 import './styles.scss'
 
-import React from 'react'
+import React, { PropTypes as ptype } from 'react'
 import { connect } from 'react-redux'
 import { mapState } from './mapProps'
 
@@ -32,7 +32,10 @@ export class CurrencyFollowed extends React.Component {
   }
 }
 
-CurrencyFollowed.propTypes = {}
+CurrencyFollowed.propTypes = {
+  date: ptype.string,
+  followed: ptype.array
+}
 
 const mapStateToProps = (state) => mapState(state);
 

@@ -44,11 +44,7 @@ export class SelectCurrency extends Component {
     const { currencyList, active, followed } = this.props
 
     if (currencyList.length <= 0) {
-      return (
-        <div>
-          Loading
-        </div>
-      )
+      return ( <div>Loading</div> )
     }
 
     return (
@@ -60,7 +56,13 @@ export class SelectCurrency extends Component {
 }
 
 SelectCurrency.propTypes = {
-  //currencies: ptype.array.isRequired
+  active: ptype.object.isRequired,
+  followed: ptype.array.isRequired,
+  currencyList: ptype.array.isRequired,
+  markActive: ptype.func.isRequired,
+  addFollowed: ptype.func.isRequired,
+  removeFollowed: ptype.func.isRequired,
+  getCurrencies: ptype.func.isRequired,
 }
 
 const mapStateToProps = (state) => mapState(state);

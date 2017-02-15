@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes as ptype } from 'react'
 import { connect } from 'react-redux'
 import { mapState } from './mapProps'
 
@@ -26,7 +26,10 @@ export class CurrencyDetails extends React.Component {
   }
 }
 
-CurrencyDetails.propTypes = {}
+CurrencyDetails.propTypes = {
+  date: ptype.string,
+  active: ptype.object
+}
 
 const mapStateToProps = (state) => mapState(state);
 
